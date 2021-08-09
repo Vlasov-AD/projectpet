@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'key'       => 'AIzaSyDONaaCFwSy5SJKS4Shz9pTT-pKNLnQpzc',
+    'key'       => env('GOOGLE_API_KEY', ''),
 
-    /*
+    /*env('APP_NAME', 'BooksOnline')
     |--------------------------------------------------------------------------
     | Verify SSL Peer
     |--------------------------------------------------------------------------

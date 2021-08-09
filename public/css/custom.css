@@ -1,0 +1,1393 @@
+/*Глобальные*/
+
+body{
+	font-family: Segoe UI, Helvetica, SegoeWP;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;	
+	position: relative;
+	z-index: 1;
+	display: block;
+	overflow: auto;
+}
+
+/*Заимствованные из Bootstrap*/
+
+/*Вывод ошибок/успехов*/
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+
+}
+
+.alert li{
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.alert-danger {
+  color: #761b18;
+  background-color: #f9d6d5;
+  border-color: #f7c6c5;
+}
+.alert-danger hr {
+  border-top-color: #f4b0af;
+}
+.alert-danger .alert-link {
+  color: #4c110f;
+}
+
+.alert-success {
+ text-align: center;
+  font-size: 20px;
+  font-weight: bold;;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-success hr {
+  border-top-color: #b1dfbb;
+}
+
+.alert-success .alert-link {
+  color: #0b2e13;
+}
+
+/*Пагинация*/
+.pagination_div{
+	display: inline-block;
+	width: 100%;
+}
+
+.pagination {
+ 
+  display: inline-block;
+  float: right;
+  padding-left: 0;
+  list-style: none;
+  padding-right: 20px;
+
+}
+
+.pagination li{
+ 
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+
+}
+
+.page-link {
+  
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #000;
+  text-decoration: none;
+  background-color: #f4f4f4;
+  
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: red;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-link:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  margin-right: 2px;
+  border: 1px solid #888;
+  border-bottom: 3px solid #79b260;
+  color: #000;
+}
+
+.page-item.disabled .page-link {
+  color: #f4f4f4;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: auto;
+  border-color: #dee2e6;
+}
+
+.pagination-lg .page-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.pagination-lg .page-item:first-child .page-link {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.pagination-lg .page-item:last-child .page-link {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.pagination-sm .page-link {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.pagination-sm .page-item:last-child .page-link {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.container{
+	margin: 5px 10%;
+	width: 80%;
+	height: auto;
+}
+
+.container-border{
+	border: 1px solid #dedede;
+	border-radius: 5px;
+}
+
+/*Шапка с активными ссылками*/
+.nav-header {
+	background-color: #424242;
+	width: 100%;
+
+}
+.nav-header ul{
+	list-style-type: none;
+	font-size: 16px;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	margin-bottom: 0;
+	margin-top: 0;
+	
+}
+
+.nav-header li{
+	display: inline;
+	padding-left:  10px;
+}
+
+.nav-header a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav-header a:hover{
+	color: red;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #424242;
+    color: white;
+    
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 235px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #424242; color: red;}
+
+.nav-header span{
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav-header span:hover{
+	color: red;
+}
+
+
+
+/*Шапка*/
+.main-header{
+	background-image: linear-gradient(to top, #ccc, #f4f4f4);
+	height: 120px;
+	width: 100%;
+	display: inline-block;
+}
+
+#logo-header{
+	display: inline-block;
+	float: left;
+	margin: 21px 5% 16px 5%;
+	width: 10%;
+}
+
+#logo-header img{
+	display: block;
+	height: 80px;
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#search_form{
+	float: left;
+	background-color: #79b260;
+	width: 50%;
+	height: 50px;
+	margin: 35px 1% 20px 1%;
+	border-radius: 15px;
+	
+}
+
+#search_button{
+	margin-right: 1%;
+	margin-top: 5px;
+	float: right;
+	height: 40px;
+	width: 15%;
+	background-color: #79b260;
+	background-image: url('../storage/includes_images/search_icon.png');
+	background-repeat: no-repeat;
+	background-position: left 5% center;
+	color: #fff;
+	font-size: 19px;
+	text-align: center;	
+	border: #79b260;
+	border-radius: 10px;
+	outline: none;
+}
+
+#search_button:hover{
+	background-color: green;
+}
+
+#search_bar{
+	margin: 4px 1%;
+	height: 40px;
+	width: 80%;
+	border: 0;
+	border-radius: 10px;
+	outline: none;
+}
+
+.shop_cart_block{
+	float: left;
+	width: 15%;
+	height: 100px;
+	display: inline-block;
+	margin: 10px 10% 10px 1%;
+}
+
+.shop_cart_block img{
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin: 5px;
+}
+
+.shop_cart_block h3{
+	
+	float: left;
+	font-size: 12px;
+	margin: 10px 1% 5px 1%;
+	
+}
+
+.shop_cart_block h4{
+	padding: 0;
+	float: left;
+	font-size: 12px;
+	margin: 10px 3% 5px 1%;	
+}
+
+.cart_button_buy_div
+{display: inline-block;
+	width: 100%;
+	margin: 0;
+	display: inline-block;
+}
+
+
+
+
+.cart_button_buy
+{	text-decoration: none;
+	text-align: center;
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	line-height: 30px;
+	vertical-align: middle;
+
+	font-size: 15px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 5px;
+	outline: none;
+}
+
+.cart_button_buy:hover{
+	background-color:#79b260 ;
+}
+
+/*Блок рекламы*/
+
+/*Слайд секция*/
+.advert_section{
+	margin: 0 10% 5px 10%;
+	padding: 0;
+	width: 80%;
+	height: 305px;
+	float: left;
+	display: inline-block;
+}
+
+.advert_slide{
+	display: inline-block;
+	margin: 0 2% 0 0;
+	padding: 0;
+	width: 70%;
+	height: 100%;
+}
+
+#prev_slide, #next_slide {
+	position: relative;
+  top: -300px;
+	cursor: pointer;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 26px;
+	transition: 0.6s ease;
+	border-radius: 50%;
+	margin: 125px 2% 0px 2%;
+}
+
+#next_slide {
+  	float: right;
+}
+
+#prev_slide {
+   	float: left;
+}
+
+#prev_slide:hover, #next_slide:hover {
+  background-color: rgba(0,0,0,0.46);
+}
+
+/*Предложение месяца*/
+.advert_special{
+	float: right;
+	width: 25%;
+	height: 100%;
+	margin: 0 0 0 3%;
+	padding: 0;
+	background: url('../storage/includes_images/advertImages/dealofmonth.png') 100% 0% no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+}
+
+#get_special{
+	width: 30%;
+	height: 30px;
+	margin: 270px 35% 0 35%;
+	background-color: #79b260;
+	border-radius: 5px;
+	border:none;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 1px 1px 0 #000;
+	outline: none;
+}
+
+#get_special:hover {
+	background-color: green;
+}
+
+/*Основная часть*/
+
+/*Боковая панель*/
+.side_category{
+	width: 20%;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	border: 1px solid #000;
+}
+
+.side_category a{
+	text-decoration: none;
+	color: #000;
+}
+
+.side_category a:hover{
+	color: red;
+}
+
+.side_category p{
+	padding: 15px 2%;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0;
+}
+
+.side_category ul{
+	margin: 0;
+	padding: 15px 2%;
+	font-weight: bold;
+	
+}
+
+
+.side_category ul li{
+	margin: 15px 5%;
+	font-weight: normal;
+	border-bottom: solid 1px #000;
+	text-align: left;
+	list-style-type: none;
+}
+
+.side_category h3{
+	margin: 0;
+	padding: 15px 2% 0 2%;
+	border-bottom: solid 1px #000;
+}
+
+.current_categorie{
+	background-color: #79b260;
+}
+
+/*Основновное тело*/
+
+#body_content{
+	margin: 0;
+	padding: 0;
+	width: 78%;
+	float: right;
+}
+/*Вкладки*/
+
+#tab_buttons{
+	clear: both;
+	width: 100%;
+	padding: 0;
+	float: left;
+	position: relative;
+
+}
+
+.radio_tabs + label{
+	font-family: Segoe UI, Helvetica, SegoeWP;
+	font-size: 18px;
+	cursor: pointer;
+	float: left;
+	border: 1px solid #000;
+	background-color: #ccc;
+	margin-right: -1px;
+	padding: .5em 1%;
+
+}
+
+.radio_tabs{
+	display: none;
+}
+
+.radio_tabs:hover + label{
+	background-color: #ddd;
+	color: red;
+}
+
+.radio_tabs:checked + label{
+	background-color: #f4f4f4;
+	border-bottom: 1px solid #fff;
+}
+
+	
+/*Отображение книг*/
+.view_books{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	float: left;
+	border: 1px solid #000;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: #f4f4f4;
+}
+
+#view_books_best{
+	display: block;
+}
+
+#view_books_new{
+	display: none;
+}
+
+#view_books_special{
+	display: none;
+}
+
+.book_body{
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	width: 190px;
+	height: 300px;
+	margin: 20px;
+	
+}
+
+.book_body span{
+	position: absolute;
+	display: inline-block;
+	background: red;
+	border-radius: 50%;
+	color: #fff;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+	animation: beat  2s ease infinite alternate;
+	margin: 10px 10px 10px 120px;
+
+}
+
+@keyframes beat {
+	from {	transform: rotate(20deg) scale(0.8); }
+	to {	transform: rotate(20deg) scale(1.2); }
+}
+
+.inside_book_body{
+	float: left;
+	width: 80%;
+	margin:  20px 10%;
+}
+
+.book_body img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 0;
+	width: 100px;
+	height: 166.66px;
+	border: solid 5px #fff;
+}
+
+.book_body h3{
+	margin: 1px;
+	height: auto;
+	min-height: 20px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.book_body h2{
+	margin: 2px;
+	font-size: 22px;
+	text-align: center;
+	color: red;
+}
+
+
+/*Нижний колонтитул*/
+
+#footer_main{
+	overflow: hidden;
+	width: 100%;
+	display: inline-block;
+	background-color: #464542;
+	color: #fff;
+	float: right;
+	margin-top: 20px;
+}
+/*Категории*/
+.footer_category{
+	margin: 10px 4% 10px 9%;
+	float: left;
+}
+
+.footer_category p{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: left;
+	margin: 20px 0;
+}
+
+.footer_category ul{
+	padding: 0;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: left;
+	list-style-type: none;
+	margin: 10px 0 10px 0;
+}
+
+.footer_category a{
+	font-size: 16px;
+	color: #fff;
+	text-decoration-color: #fff;
+}
+
+.footer_category li{
+	padding: 0;
+	text-align: left;
+	margin: 5px 0 5px 0;
+}
+
+.footer_category h3{
+	color: #fff;
+	margin: 5px 0 15px 0;
+}
+
+.footer_category li:hover, .footer_category h3:hover{
+	color: red;
+}
+
+/*Другая информация*/
+#footer_other{
+	float: left;
+	margin: 50px 5% 10px 5%;
+}
+
+#footer_other li{
+	list-style-type: none;
+	padding: 0;
+	margin: 20px;
+}
+
+#footer_other a{
+	color: #fff;
+	text-decoration-color: #fff;
+}
+#footer_other a:hover{
+	color: red;
+}
+/*Способы оплаты*/
+#footer_payment{
+	float: left;
+	margin: 20px 9% 10px 4%;
+}
+
+#footer_payment li{
+	list-style-type: none;
+	text-align: center;
+}
+
+#footer_payment li img{
+	margin: 5px;
+	width: 80px;
+	height: 40px;
+}
+
+
+/*Страница с контентом*/
+
+/*Строка с информацие о книге*/
+#content_ref{
+	width: 100%;
+	padding: 5px 0;
+	margin: 10px 0;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	font-size: 16px;
+	font-style: italic;
+}
+
+#content_ref a{
+	padding: 0 5px;
+	color: #000;
+	text-decoration: none;
+}
+
+#content_ref a:hover{
+	color: red;
+	text-decoration-line: underline;
+}
+
+/*Тело книги*/
+#book_annotation{
+	width: 100%;
+	padding: 0;
+	margin: 10px 0;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	display: inline-block;
+}
+/*Обложка*/
+#image_product{
+	float: left;
+	margin: 20px 10px;
+	width: 250px;
+	height: 400px;
+}
+/*Описание*/
+#annotation_buy{
+	float: left;
+	margin: 20px 10px;
+	width: 70%;
+}
+
+#annotation_buy h2{
+	margin: 0;
+	font-weight: bold;
+	font-size: 26px;
+}
+
+#annotation_buy h3{
+	font-weight: normal;
+	font-size: 16px;
+	text-align: justify;
+}
+
+/*Добавление в корзину*/
+#add_to_cart{
+	float: left;
+	margin: 10px 0;
+	width: 100%;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+}
+
+#price_button{
+
+	height: 120px;
+}
+
+#price_button h1{	
+	float: left;
+	color: blue;
+	margin: 10px;
+	width: 90%;
+}
+
+#price_button h1 span{	
+	color: red;
+}
+
+#price_button p{	
+	margin: 10px;
+	float: left;
+	font-size: 20px;
+	width: 90%;
+}
+
+#price_button div{	
+	margin: 10px;
+	float: left;
+	width: 50%;
+	display: inline-block;
+}
+
+
+/*Системы платежей в добавлении*/
+#block_payment{
+	display: inline-block;
+	margin: 10px 3%;
+	width: 94%;
+	border-top: 1px solid #000;
+}
+#block_payment li{
+	list-style-type: none;
+	display: inline;
+}
+
+#block_payment img{
+	width: 50px;
+	height: 31px;
+	margin: 10px;
+}
+
+.add_to_cart_universal{
+	display: inline-block;
+	line-height: 60px;
+	vertical-align: middle;
+	float: left;
+	width: 190px;
+	
+	background-color:#79b260;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	white-space: pre-line;
+	font-size: 16px;
+	border: 2px solid #79b260;
+	border-radius: 5px;
+	outline: none;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.add_to_cart_universal:hover{
+	border:  2px solid #000;
+}
+
+
+/*Блок информации о книге, предложения, отзывы*/
+#info_suggestions_comments{
+	display: inline-block;
+	width: 100%;
+	margin: 10px 0;
+}
+
+/*Блок доп.инфы + отзывы*/
+#info_comments{
+	display: inline-block;
+	margin: 0 5px 0 0;  
+	float: left;
+	width: 70%;
+}
+
+/*Доп.информация*/
+#info_book h3{
+	margin: 0;
+	padding: 10px;
+	width: 250px;
+	text-align: center;
+	font-weight: normal;
+	font-size: 24px;
+	border-top: 1px solid #dedede;
+	border-left : 1px solid #dedede;
+	border-right: 1px solid #dedede;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#info_book div{
+	margin: 0;
+	width: 100%;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	display: inline-block;
+}
+
+#info_book p{
+	margin: 20px 0;
+	float: left;
+	text-align: center;
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+/*Комментарии*/
+#comment_section{
+	margin: 10px 0 0 0;
+	width: 100%;
+	display: inline-block;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+}
+
+#comment_section h2{
+	width: 100%;
+	float: left;
+	font-weight: normal;
+	font-size: 24px;
+	background-color: #eee;
+	text-align: center;
+}
+
+.comment_elem{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid #dedede;
+	border-bottom
+
+}
+
+.comment_elem div{
+	margin: 10px 1%;
+	width: 17%;
+	float: left;
+
+}
+
+.comment_elem img{
+	width: 100%;
+	height: auto;
+
+}
+
+.comment_elem h3{
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	font-weight: normal;
+	font-size: 14px;
+	
+}
+
+.comment_elem h4{
+	position: absolute;
+	margin: 10px 1%;
+	width: 75%;
+	float: right;
+	text-align: right;
+	font-weight: normal;
+	font-size: 16px;
+	bottom: 0%;
+	left: 20%;
+
+}
+
+.comment_elem p{
+	margin: 10px 1%;
+	width: 77%;
+	float: right;
+	text-align: justify;
+}
+
+/*Добавление комментария*/
+
+.action_form{
+	display: inline-block;
+	width: 100%;
+	
+}
+
+.account_span{
+	text-align: right;
+	margin: 10px 5px;
+	height: 40px;
+	width: 16%;
+	float: left;
+	padding: 1px 0;
+}
+
+
+
+.text_form{
+	float: right;
+	width: 70%;
+	margin: 10px 5% 10px 5px;
+	border: #dedede;
+	border-radius: 5px;
+	outline: none;
+	height: 40px;	
+}
+
+.text_select{
+	float: right;
+	width: 70.35%;
+	margin: 10px 5% 10px 5px;
+	border: #dedede;
+	border-radius: 5px;
+	outline: none;
+	height: 42px;	
+}
+
+.text_form_email{
+
+	float: right;
+	width: 70%;
+	margin: 10px 5% 10px 5px;
+	padding: 1px 2px;
+	background-color: #fff;
+	border: #dedede;
+	border-radius: 5px;
+	outline: none;
+	text-align: left;
+	font-size: 26px;
+	height: 40px;
+}
+
+.text_comment{
+	
+	height: 120px;
+}
+
+.text_account{
+	text-align: left;
+	font-size: 26px;
+	
+}
+
+.button_form{
+	float: right;
+	display: inline-block;
+	height: 40px;
+	
+	background-color: #79b260;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border: #79b260;
+	border-radius: 5px;
+	outline: none;
+}
+
+#button_comment{
+	width: 100px;
+	margin: 10px 5% 10px 40%;
+}
+
+#button_account{
+	width: 200px;
+	margin: 10px 5% 10px 5%;
+}
+
+#buttonCreateBook{
+	width: 200px;
+	margin: 10px 5% 10px 5%;
+}
+
+.button_form:hover{
+	background-color: green;
+}
+
+.button_file{
+	float: left;
+	margin: 10px 5% 10px 5px;
+}
+
+.file_div{
+	display: inline-block;
+	width: 30%;
+	margin-left: 25%;
+	float: left;
+	
+}
+
+
+/*Блок предложений*/
+#suggestions_book{
+	display: inline-block;
+	margin: 0 0 0 5px;
+	float: right;
+	width: 25%;
+	height: auto;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+
+}
+
+#suggestions_book p{
+	width: 90%;
+	margin: 10px;
+	text-align: left;
+	font-size: 20px;
+	text-align: center;
+}
+
+#suggestions_book div{
+	border: none;
+}
+
+#suggestions_book h4{
+	font-weight: normal;
+	font-size: 20px;
+	width: 100%;
+	min-height: 25px;
+	height: auto;
+	color: #fff;
+	background-color: #595959;
+	border-radius:5px;
+	width: 80%;
+	margin: 5px 10%;
+	text-align: center;
+	
+}
+
+#suggestions_book h4:hover{
+	background-color: #aaa;
+}
+
+#book_suggestion{
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+/*Контакты*/
+#contact_page{
+	display: inline-block;
+	margin: 10px 10%;
+	width: 80%;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+}
+
+
+
+/*Форма входа*/
+
+.pop_window_class{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.pop_window_class div{
+	position: fixed;
+	width: 300px;
+	height: 550px;
+	top: 100px;
+	right: 100px;
+	background-color: #f4f4f4;
+	border: 3px solid #79b260;
+	border-radius: 15px;
+}
+
+.pop_window_class h1{
+	font-size: 24px;
+	margin: 40px 10px 10px 10px;
+	text-align: center;
+}
+
+.pop_window_class h2{
+	font-size: 20px;
+	margin: 20px 0;
+	width: 100%;
+	text-align: center;
+	cursor: pointer; 
+}
+
+.pop_window_class h2:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+.x-button{
+	position: fixed;
+	top: 90px;
+	right: 130px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.pop_window_class p:hover{
+	color: red;
+}
+
+.eye_icon{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border: solid 2px #000;
+	border-radius: 75% 15%;
+	position: fixed;
+	top: 365px;
+	right: 150px;
+	transform: rotate(45deg);
+}
+
+.eye_icon span{
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	top: 4px;
+	left: 4px;
+}
+
+.eye_icon_account{
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border: solid 2px #000;
+	border-radius: 75% 15%;
+	position: absolute;
+	top: 365px;
+	right: 17%;
+	transform: rotate(45deg);
+}
+
+.eye_icon_account span{
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	top: 6px;
+	left: 6px;
+}
+
+.eye_icon_reset{
+	top: 240px;
+}
+
+/*Общие элементы формы*/
+.registration_enter_recovery_form h3{
+	font-weight: 20px;
+	margin:20px 0;
+	width: 100%;
+	text-align: center;
+}
+
+.registration_enter_recovery_form input[type="email"], 
+.registration_enter_recovery_form input[type="password"],
+.registration_enter_recovery_form input[type="text"]
+{
+	width: 80%;
+	margin: 5px 10%;
+	height: 30px;
+	border: 3px solid #79b260;
+	border-radius: 5px;
+	outline: none;
+	font-size: 18px;
+
+}
+
+.registration_enter_recovery_form input[type="submit"]{
+	width: 80%;
+	margin: 5px 10%;
+	height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #79b260;
+	color: #fff;
+	border:none;
+	border-radius: 5px;
+	outline: none;
+}
+
+.registration_enter_recovery_form input[type="submit"]:hover{
+	background-color: green;
+}
+
+#pop_enter_wrong{
+	display: none;
+}
+
+#pop_registration_wrong{
+	display: none;
+}
+
+.pop_errors{
+	margin: 0;
+	font-size: 14px;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*Учетная запись*/
+#user_account_body{
+	display: block;
+	margin: 10px 10%;
+	float: left;
+	height: 500px;
+	width: 80%;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+}
+
+/*Корзина*/
+.shopBottom{
+	margin: 10px 0 0 0;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	display: inline-block;
+	width: 100%;
+	height: 100px;
+	float: left;
+}
+
+.sumToPay{
+	padding: 0 0 0 5%;
+	width: 95%;
+	margin: 28px 0;
+}
+
+#buyShopButton{
+
+	display: inline-block;
+	margin: 25px 35%;
+	width: 30%;
+	line-height: 50px;
+	vertical-align: 50%;
+	height: auto;
+	background-color: #79b260;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	white-space: pre-line;
+	font-size: 20px;
+	border: #79b260;
+	border-radius: 5px;
+	outline: none;
+}
+
+#buyShopButton:hover{
+	background-color: green;
+}
